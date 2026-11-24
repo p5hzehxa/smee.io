@@ -25,6 +25,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
+      - name: Run tests and lint
+        run: npm test
       - run: npm run build
 
   docker:
